@@ -1,0 +1,5 @@
+Failed password for invalid user admin from 192.0.2.10 port 54321 ssh2
+
+sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+
+192.0.2.20 - - [07/Oct/2026:13:00:00 +0530] "GET /missing-page HTTP/1.1" 404 162

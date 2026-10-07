@@ -1,0 +1,332 @@
+{
+  "v": 1,
+  "id": "8cbaaa01-57b0-47c9-b3a9-1bffd76aa93f",
+  "rev": 1,
+  "name": "Linux Server Security & Web Logs",
+  "summary": "Graylog dashboard for Linux server security and web log monitoring.",
+  "description": "# Linux Server Security & Web Logs\n\nA lightweight Graylog dashboard for monitoring common Linux server security and web log events.\n\n## Features\n\n- SSH failed login monitoring\n- Sudo activity monitoring\n- HTTP 404 error monitoring\n- Simple message-count visualizations\n- Designed for Linux server administrators and security monitoring\n\n## Dashboard\n\nThe dashboard includes:\n\n- SSH Failed Login Attempts\n- Sudo Activity\n- Web 404 Errors\n\nThis content pack provides a simple starting point for Linux server log monitoring and can be customized for individual environments.\n\n## Linux Server Management\n\nFor Linux server administration, monitoring, security, troubleshooting, and performance management, see [iServerSupport Linux Server Management](https://iserversupport.com/linux-server-management/).",
+  "vendor": "Linux Server Management Community",
+  "url": "",
+  "parameters": [],
+  "entities": [
+    {
+      "v": "1",
+      "type": {
+        "name": "dashboard",
+        "version": "2"
+      },
+      "id": "9cd179a7-6ac2-4146-84c2-2678a591bee3",
+      "data": {
+        "summary": {
+          "@type": "string",
+          "@value": ""
+        },
+        "search": {
+          "queries": [
+            {
+              "id": "7f9423dc-d549-4f44-80fa-f1908a1ec630",
+              "timerange": {
+                "from": 300,
+                "type": "relative"
+              },
+              "filters": [],
+              "query": {
+                "type": "elasticsearch",
+                "query_string": ""
+              },
+              "search_types": [
+                {
+                  "query": {
+                    "type": "elasticsearch",
+                    "query_string": ""
+                  },
+                  "name": "chart",
+                  "timerange": {
+                    "from": 900,
+                    "type": "relative"
+                  },
+                  "column_limit": null,
+                  "streams": [],
+                  "row_limit": null,
+                  "series": [
+                    {
+                      "type": "count",
+                      "id": "Message Count",
+                      "field": null
+                    }
+                  ],
+                  "filter": null,
+                  "rollup": true,
+                  "row_groups": [],
+                  "type": "pivot",
+                  "stream_categories": [],
+                  "id": "46ce4457-ca08-4c01-9a99-81db48cf0251",
+                  "filters": [],
+                  "column_groups": [],
+                  "sort": []
+                },
+                {
+                  "query": {
+                    "type": "elasticsearch",
+                    "query_string": ""
+                  },
+                  "name": "chart",
+                  "timerange": {
+                    "from": 900,
+                    "type": "relative"
+                  },
+                  "column_limit": null,
+                  "streams": [],
+                  "row_limit": null,
+                  "series": [
+                    {
+                      "type": "count",
+                      "id": "Message Count",
+                      "field": null
+                    }
+                  ],
+                  "filter": null,
+                  "rollup": true,
+                  "row_groups": [],
+                  "type": "pivot",
+                  "stream_categories": [],
+                  "id": "5d4c4d0b-53ba-48d8-b95c-49c12f6440c3",
+                  "filters": [],
+                  "column_groups": [],
+                  "sort": []
+                },
+                {
+                  "query": {
+                    "type": "elasticsearch",
+                    "query_string": "sudo"
+                  },
+                  "name": "chart",
+                  "timerange": {
+                    "from": "2026-10-07T12:05:31.343Z",
+                    "to": "2026-10-07T12:06:32.023Z",
+                    "type": "absolute"
+                  },
+                  "column_limit": null,
+                  "streams": [],
+                  "row_limit": null,
+                  "series": [
+                    {
+                      "type": "count",
+                      "id": "Message Count",
+                      "field": null
+                    }
+                  ],
+                  "filter": null,
+                  "rollup": true,
+                  "row_groups": [],
+                  "type": "pivot",
+                  "stream_categories": [],
+                  "id": "02326531-b185-4c8d-8513-0f3cb046c757",
+                  "filters": [],
+                  "column_groups": [],
+                  "sort": []
+                }
+              ]
+            }
+          ],
+          "parameters": [],
+          "requires": {},
+          "owner": "admin",
+          "created_at": "2026-10-07T12:14:15.421Z"
+        },
+        "created_at": "2026-10-07T11:46:06.193Z",
+        "requires": {},
+        "state": {
+          "7f9423dc-d549-4f44-80fa-f1908a1ec630": {
+            "selected_fields": null,
+            "static_message_list_id": null,
+            "titles": {
+              "widget": {
+                "5a0f17cd-0c45-4c76-ad2a-287c8824acd1": "SSH Failed Login Attempts",
+                "c7ee53cc-4452-43f7-8b0e-0843217e2634": "Sudo Activity",
+                "6ba97778-fba7-4d58-9025-34ef22bedadf": "Web 404 Errors"
+              }
+            },
+            "widgets": [
+              {
+                "config": {
+                  "visualization": "numeric",
+                  "units": {},
+                  "column_limit": null,
+                  "event_annotation": false,
+                  "row_limit": null,
+                  "row_pivots": [],
+                  "series": [
+                    {
+                      "config": {
+                        "name": "Message Count",
+                        "thresholds": []
+                      },
+                      "function": "count()"
+                    }
+                  ],
+                  "rollup": false,
+                  "column_pivots": [],
+                  "visualization_config": null,
+                  "formatting_settings": null,
+                  "sort": []
+                },
+                "query": {
+                  "type": "elasticsearch",
+                  "query_string": ""
+                },
+                "context": null,
+                "timerange": {
+                  "from": 900,
+                  "type": "relative"
+                },
+                "streams": [],
+                "filter": null,
+                "type": "aggregation",
+                "stream_categories": [],
+                "id": "6ba97778-fba7-4d58-9025-34ef22bedadf",
+                "filters": [],
+                "description": null
+              },
+              {
+                "config": {
+                  "visualization": "numeric",
+                  "units": {},
+                  "column_limit": null,
+                  "event_annotation": false,
+                  "row_limit": null,
+                  "row_pivots": [],
+                  "series": [
+                    {
+                      "config": {
+                        "name": "Message Count",
+                        "thresholds": []
+                      },
+                      "function": "count()"
+                    }
+                  ],
+                  "rollup": false,
+                  "column_pivots": [],
+                  "visualization_config": null,
+                  "formatting_settings": null,
+                  "sort": []
+                },
+                "query": {
+                  "type": "elasticsearch",
+                  "query_string": ""
+                },
+                "context": null,
+                "timerange": {
+                  "from": 900,
+                  "type": "relative"
+                },
+                "streams": [],
+                "filter": null,
+                "type": "aggregation",
+                "stream_categories": [],
+                "id": "5a0f17cd-0c45-4c76-ad2a-287c8824acd1",
+                "filters": [],
+                "description": "\"Failed password\""
+              },
+              {
+                "config": {
+                  "visualization": "numeric",
+                  "units": {},
+                  "column_limit": null,
+                  "event_annotation": false,
+                  "row_limit": null,
+                  "row_pivots": [],
+                  "series": [
+                    {
+                      "config": {
+                        "name": "Message Count",
+                        "thresholds": []
+                      },
+                      "function": "count()"
+                    }
+                  ],
+                  "rollup": false,
+                  "column_pivots": [],
+                  "visualization_config": null,
+                  "formatting_settings": null,
+                  "sort": []
+                },
+                "query": {
+                  "type": "elasticsearch",
+                  "query_string": "sudo"
+                },
+                "context": null,
+                "timerange": {
+                  "from": "2026-10-07T12:05:31.343Z",
+                  "to": "2026-10-07T12:06:32.023Z",
+                  "type": "absolute"
+                },
+                "streams": [],
+                "filter": null,
+                "type": "aggregation",
+                "stream_categories": [],
+                "id": "c7ee53cc-4452-43f7-8b0e-0843217e2634",
+                "filters": [],
+                "description": "sudo"
+              }
+            ],
+            "widget_mapping": {
+              "5a0f17cd-0c45-4c76-ad2a-287c8824acd1": [
+                "5d4c4d0b-53ba-48d8-b95c-49c12f6440c3"
+              ],
+              "c7ee53cc-4452-43f7-8b0e-0843217e2634": [
+                "02326531-b185-4c8d-8513-0f3cb046c757"
+              ],
+              "6ba97778-fba7-4d58-9025-34ef22bedadf": [
+                "46ce4457-ca08-4c01-9a99-81db48cf0251"
+              ]
+            },
+            "positions": {
+              "5a0f17cd-0c45-4c76-ad2a-287c8824acd1": {
+                "col": 1,
+                "row": 1,
+                "height": 4,
+                "width": 4
+              },
+              "c7ee53cc-4452-43f7-8b0e-0843217e2634": {
+                "col": 5,
+                "row": 1,
+                "height": 4,
+                "width": 4
+              },
+              "6ba97778-fba7-4d58-9025-34ef22bedadf": {
+                "col": 9,
+                "row": 1,
+                "height": 4,
+                "width": 4
+              }
+            },
+            "formatting": {
+              "highlighting": []
+            },
+            "display_mode_settings": {
+              "positions": {}
+            }
+          }
+        },
+        "properties": [],
+        "owner": "admin",
+        "title": {
+          "@type": "string",
+          "@value": "Linux Server Security & Web Logs"
+        },
+        "type": "DASHBOARD",
+        "description": {
+          "@type": "string",
+          "@value": "Graylog dashboard for Linux server security and web log monitoring, including SSH failed login attempts, sudo activity, and HTTP 404 errors."
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=7.1.9+002c047"
+        }
+      ]
+    }
+  ]
+}
